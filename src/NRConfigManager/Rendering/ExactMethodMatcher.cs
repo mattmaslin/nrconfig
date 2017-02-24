@@ -30,7 +30,7 @@ namespace NRConfigManager.Rendering
             this.MethodName = methodName;
             if (parameterTypes != null && parameterTypes.Any())
             {
-                this.ParameterTypes = string.Join(",", parameterTypes);
+                this.ParameterTypes = string.Join(",", parameterTypes).Replace("<", "[").Replace(">", "]");
             }
         }
 
